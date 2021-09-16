@@ -4,42 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection</title>
-    <link  rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-collection.css">
+    <style>
+        /* Web Fonts */
+        footer {
+            font-family: "Open Sans", monospace;
+            font-size: 80%;
+        }
+    </style>
     <script type="text/javascript" src="js/script.js" defer></script>
 </head>
 <body>
 <header>
     <!-- Put header here -->
-    <div class="menu-container">
+    <section class="menu-container">
         <div class="menu-logo">
             <!--<h1>One Art Nation</h1>-->
             <!--<h2>Online Art Gallery</h2>-->
-            <img src="images/logo.jpg" width="150" height="55" alt="logo">
+            <a href="index.html"><img id="image-logo" src="images/logo.jpg" width="auto" height="103" alt="logo"></a>
         </div>
         <div class="menu-item">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="collection.html">Collection</a></li>
-                    <li><a href="#">Exhibitions</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="empty.html">Exhibitions</a></li>
+                    <li><a href="empty.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="menu-search">
+    </section>
+    <section class="search-container">
+        <h1>&#127912; Collection &#127912;</h1>
+        <div id="search-wrapper">
             <form>
-                <input type="search" name="q" placeholder="Search query">
-                <input type="submit" value="Go!">
+                <!--<input type="search" id="search-bar" name="search-bar" placeholder="Search for an art">-->
+                <div>
+                    <label for="selectlist">Navigation</label>
+                    <select id="selectlist" name="selectlist" onChange="window.location.href=this.value;">
+                        <option value="">choose the page...</option>
+                        <option value="index.html">Home</option>
+                        <option value="collection.html">Collection</option>
+                        <option value="empty.html">Exhibitions</option>
+                        <option value="empty.html">Shop</option>
+                        <option value="contact.html">Contact</option>
+                    </select>
+                </div>
             </form>
         </div>
-    </div>
+    </section>
 </header>
 <main>
     <!-- Put main here -->
+    <section class="main-container">
+        <div class="sub-main">
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art1.jpg" width="300" height="auto" alt="Tomorrow I May Be Far Away">
+                </div>
+                <input type="button" id="buttonP1" name="buttonP1"
+                       onClick="addP1()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>Tomorrow I May Be Far Away</h4>
+                    <h5>1967 by Romare Bearden</h5>
+                    <p>Collage of various papers with charcoal, graphite and paint on paper mounted to canvas.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art2.jpg" width="300" height="auto" alt="Classic Landscape">
+                </div>
+                <input type="button" id="buttonP2" name="buttonP2"
+                       onClick="addP2()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>Classic Landscape</h4>
+                    <h5>1931 by Charles Sheeler</h5>
+                    <p>Charles Sheeler was a master of both painting and photography, and his work in one medium
+                        influenced and shaped his work in the other.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art3.jpg" width="300" height="auto" alt="Haskell's House">
+                </div>
+                <input type="button" id="buttonP3" name="buttonP3"
+                       onClick="addP3()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>Haskell's House</h4>
+                    <h5>1924 by Edward Hopper</h5>
+                    <p>Watercolor over graphite on paperboard.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art4.jpg" width="300" height="auto" alt="The Farm">
+                </div>
+                <input type="button" id="buttonP4" name="buttonP4"
+                       onClick="addP4()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Farm</h4>
+                    <h5>1922 by Joan Miró</h5>
+                    <p>Miró moved from Barcelona to Paris in 1920, determined to participate in the artistic vanguard of
+                        the French capital.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art5.jpg" width="300" height="auto" alt="The Boating Party">
+                </div>
+                <input type="button" id="buttonP5" name="buttonP5"
+                       onClick="addP5()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Boating Party</h4>
+                    <h5>1894 by Mary Cassatt</h5>
+                    <p>This bold composition reveals the influence of the flat, patterned surfaces, simplified color,
+                        and unusual angles of Japanese prints, which enjoyed a huge vogue in Paris in the late
+                        1800s.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art6.jpg" width="300" height="auto" alt="The Voyage of Life: Youth">
+                </div>
+                <input type="button" id="buttonP6" name="buttonP6"
+                       onClick="addP6()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Voyage of Life: Youth</h4>
+                    <h5>1842 by Thomas Cole</h5>
+                    <p>Cole's renowned four-part series traces the journey of an archetypal hero along the "River of
+                        Life.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art7.jpg" width="300" height="auto" alt="The Adoration of the Shepherds">
+                </div>
+                <input type="button" id="buttonP7" name="buttonP7"
+                       onClick="addP7()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Adoration of the Shepherds</h4>
+                    <h5>1510 by Giorgione</h5>
+                    <p>Giorgione has always been considered one of the greatest artists of the Renaissance, and one
+                        whose influence on following generations of painters was considerable.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art8.jpg" width="300" height="auto" alt="Nonchaloir (Repose)">
+                </div>
+                <input type="button" id="buttonP8" name="buttonP8"
+                       onClick="addP8()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>Nonchaloir (Repose)</h4>
+                    <h5>1911 by John Singer Sargent</h5>
+                    <p>Sargent's inordinate technical facility, coupled with his ability to portray elegant sitters in
+                        sumptuous surroundings, made him extremely popular with wealthy patrons on both sides of the
+                        Atlantic.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art9.jpg" width="300" height="auto" alt="Great America">
+                </div>
+                <input type="button" id="buttonP9" name="buttonP9"
+                       onClick="addP9()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>Great America</h4>
+                    <h5>1994 by Kerry James Marshall</h5>
+                    <p>Great America (1994) by Kerry James Marshall is the Gallery's first painting by this major
+                        mid-career artist.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art10.jpg" width="300" height="auto" alt="The Maas at Dordrecht">
+                </div>
+                <input type="button" id="buttonP10" name="buttonP10"
+                       onClick="addP10()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Maas at Dordrecht</h4>
+                    <h5>1650 by Aelbert Cuyp</h5>
+                    <p>Dordrecht, situated at the confluence of the Maas and the Merwede rivers, serves as a backdrop to
+                        this historical scene on the water.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art11.jpg" width="300" height="auto" alt="The Japanese Footbridge">
+                </div>
+                <input type="button" id="buttonP11" name="buttonP11"
+                       onClick="addP11()" value="Add to Favorite">
+                <article class="art-text">
+                    <h4>The Japanese Footbridge</h4>
+                    <h5>1899 by Claude Monet</h5>
+                    <p>In 1883 Monet moved his household, his two sons along with Alice Hoschedé and her children, to
+                        the rural community of Giverny, where he leased a house that he was able to purchase seven years
+                        later.</p>
+                </article>
+
+            </div>
+            <div class="main-items">
+                <div class="art-img">
+                    <img src="images/art12.jpg" width="300" height="auto" alt="Nanny and Child">
+                </div>
+                <input type="button" id="buttonP12" name="buttonP12"
+                       onClick="addP12()" value="Add to Favorite">
+                <article class="art-text" id="painting12">
+                    <h4>Nanny and Child</h4>
+                    <h5>1878 by Eva Gonzalès</h5>
+                    <p>Although a close associate of the impressionists who shared their dedication to the portrayal of
+                        modern life, Eva Gonzalès never participated in their group exhibitions.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
 </main>
+<aside>
+    <section class="aside-container">
+        <h2>Favorite Arts</h2>
+        <ul id="paintings" class="list-group">
+            <!--<li name="list-group-item">Item 1</li>-->
+            <!--<li name="list-group-item">Item 2</li>-->
+            <!--<li name="list-group-item">Item 3</li>-->
+        </ul>
+        <form id="form1">
+            <input type="button" id="button1" name="button1"
+                   onClick="showAllMyFavoriteArts()"
+                   value="Show All My Favorite Arts">
+        </form>
+        <h4 id="printLocation">___</h4>
+    </section>
+</aside>
 <footer>
     <!-- Put footer here -->
+    <section class="footer-container">
+        <div class="footer-content">
+            <h3>One Art Nation</h3>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/wasin.sanguansuk/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC27ReFGZUWKYYLFGzdHogmw"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/wasin-sanguansuk/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>copyright &copy;2021 OneArtNation. Designed By <span>Wasin</span></p>
+        </div>
+    </section>
 </footer>
+<script>
+    //var header = document.getElementById('arts');
+    //console.log(header);
+</script>
 </body>
 </html>

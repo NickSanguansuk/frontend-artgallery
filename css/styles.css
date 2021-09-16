@@ -1,15 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css?family=Mali');
+
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
+body {
+    font-family: sans-serif;
+    /*font-size: 0;*/
+    background-color: #961e8c;
 }
 
 /* Menu */
@@ -17,7 +21,7 @@ li {
     display: flex;
     padding: 0;
     background-color: #280525;
-    font-family: cursive;
+    font-family: 'Mali', cursive;
     font-weight: 300;
     color: white;
 }
@@ -32,7 +36,10 @@ li {
 
 .menu-item {
     flex: 1;
-    margin: 20px;
+    /*margin: 20px 0;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 180px;
     font-size: 1.4em;
     /*justify-content: center;*/
     /*align-items: center;*/
@@ -44,9 +51,18 @@ li {
     /*align-items: center;*/
 }
 
+.menu-item nav ul {
+    padding: 0;
+}
+
 .menu-item nav ul li {
     /*padding-left: 10px;*/
     /*padding-right: 10px;*/
+    list-style-type: none;
+}
+
+.menu-item nav ul li a {
+    text-decoration: none;
 }
 
 .menu-container .menu-item nav ul li a {
@@ -59,6 +75,107 @@ li {
     background-color: #becccf;
     color: #280525;
 }
+
+.character > img {
+    max-height: 100px;
+    grid-area: image;
+}
+
+/* Search Bar */
+.search-container {
+    /*padding: 10px 20px;*/
+    padding: 5px 40px 20px;
+    /*justify-content: center;*/
+    text-align: center;
+    background-color: #591253;
+}
+
+.search-container h1 {
+    color: white;
+    /*margin: 0;*/
+}
+
+#search-bar {
+    width: 100%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#search-wrapper {
+    position: relative;
+    color: #ffffff;
+}
+
+#search-wrapper::after {
+    content: '\1F50D';
+    position: absolute;
+    top: 2px;
+    right: 15px;
+}
+
+/* Footer */
+.footer-container {
+    text-align: center;
+    background-color: #280525;
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    /*font-size: 1.8rem;*/
+    font-weight: 400;
+    text-transform: capitalize;
+    /*line-height: 3rem;*/
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem 0 0.8rem 0;
+    padding: 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i {
+    font-size: 1.1rem;
+}
+
+.social a:hover i {
+    color: aqua;
+}
+
+.footer-copyright span {
+    opacity: .4;
+}
+
+
+
+
+
+
+
 
 
 

@@ -4,70 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="text/javascript" src="js/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/styles-home.css">
+    <style>
+        /* Web Fonts */
+        footer {
+            font-family: "Open Sans", monospace;
+            font-size: 80%;
+        }
+    </style>
+    <!--<script type="text/javascript" src="js/script.js" defer></script>-->
 </head>
 <body>
 <header>
     <!-- Put header here -->
-    <div class="menu-container">
+    <section class="menu-container">
         <div class="menu-logo">
             <!--<h1>One Art Nation</h1>-->
             <!--<h2>Online Art Gallery</h2>-->
-            <img id="image-logo" src="images/logo.jpg" width="auto" height="103" alt="logo">
+            <a href="index.html"><img id="image-logo" src="images/logo.jpg" width="auto" height="103" alt="logo"></a>
         </div>
         <div class="menu-item">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="collection.html">Collection</a></li>
-                    <li><a href="#">Exhibitions</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="empty.html">Exhibitions</a></li>
+                    <li><a href="empty.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="menu-search">
+    </section>
+    <section class="search-container">
+        <h1>&#127912; Welcome to One Art Nation &#127912;</h1>
+        <div id="search-wrapper">
             <form>
-                <input type="search" name="q" placeholder="Search query">
-                <input type="submit" value="Go!">
+                <!--<input type="search" id="search-bar" name="search-bar" placeholder="Search for an art">-->
+                <div>
+                    <label for="selectlist">Navigation</label>
+                    <select id="selectlist" name="selectlist" onChange="window.location.href=this.value;">
+                        <option value="">choose the page...</option>
+                        <option value="index.html">Home</option>
+                        <option value="collection.html">Collection</option>
+                        <option value="empty.html">Exhibitions</option>
+                        <option value="empty.html">Shop</option>
+                        <option value="contact.html">Contact</option>
+                    </select>
+                </div>
             </form>
         </div>
-    </div>
+    </section>
 </header>
 <main>
     <!-- Put main here -->
-    <article>
-        <h2>Article heading</h2>
-        <p>This is a paragraph.</p>
-        <h3>Subsection</h3>
-        <p>This is a subsection paragraph 1.</p>
-        <p>This is a subsection paragraph 2.</p>
-        <h3>Another subsection</h3>
-        <p>This is another subsection paragraph 1.</p>
-        <p>This is another subsection paragraph 2.</p>
-    </article>
-    <aside>
-        <h2>Related</h2>
-        <ul>
-            <li><a href="#">Oh I do like to be beside the seaside</a></li>
-            <li><a href="#">Oh I do like to be beside the sea</a></li>
-            <li><a href="#">Although in the North of England</a></li>
-            <li><a href="#">It never stops raining</a></li>
-            <li><a href="#">Oh well...</a></li>
-        </ul>
-    </aside>
+    <section class="top-container">
+        <article>
+            <h2>Hours and Admission</h2>
+            <p>The West Building, the East Building, and Sculpture Garden are open from 10:00 a.m. to 5:00 p.m. daily,
+                no timed passes required.</p>
+            <p>Admission is always free.</p>
+            <p>All visitors ages 2 and up, regardless of vaccination, are <span>required to wear masks indoors</span>.
+                Masks are not required in the outdoor Sculpture Garden, except inside the Pavilion Café.</p>
+        </article>
+    </section>
+    <section class="main-container">
+        <div class="main-items">
+            <div class="item-header">
+                <h2>Calendar of Events</h2>
+            </div>
+            <div class="item-table">
+                <table class="my-table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Image</th>
+                    </tr>
+                    <tr>
+                        <td>September 17</td>
+                        <td>
+                            <h3>The Art of Looking</h3>
+                            <p>Bartolomé Esteban Murillo, Two Women at a Window</p>
+                            <p>Friday, September 17, 2021. 1:00 p.m. – 2:00 p.m. Registration Required</p>
+                        </td>
+                        <td>
+                            <img src="images/event1.jpg"
+                                 alt="The Art of Looking" width="360" height="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 20</td>
+                        <td>
+                            <h3>Rufino Tamayo, Deux Fils</h3>
+                            <p>Genesis Flores, Education Assistant</p>
+                            <p>Monday, September 20, 2021. 1:00 p.m. – 1:30 p.m. Registration Required</p>
+                        </td>
+                        <td>
+                            <img src="images/event2.jpg"
+                                 alt="Rufino Tamayo, Deux Fils" width="360" height="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 22</td>
+                        <td>
+                            <h3>Maya Deren: Dance on Camera</h3>
+                            <p>Film will be available for online streaming starting September 22 through September
+                                28</p>
+                            <p>Wednesday, September 22, 2021. 12:00 p.m. Week-long Film Presentation</p>
+                        </td>
+                        <td>
+                            <img src="images/event3.jpg"
+                                 alt="Maya Deren: Dance on Camera" width="360" height="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 25</td>
+                        <td>
+                            <h3>Alma W. Thomas: A Citywide Celebration</h3>
+                            <p>Find beauty in the everyday, just as artist and longtime DC resident Alma Thomas did.</p>
+                            <p>Saturday, September 25, 2021. 1:00 p.m. – 5:00 p.m. East Building, Ground Level - Art
+                                Information Desk</p>
+                        </td>
+                        <td>
+                            <img src="images/event4.jpg"
+                                 alt="Alma W. Thomas: A Citywide Celebration" width="360" height="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 27</td>
+                        <td>
+                            <h3>Leopoldo Méndez, The Peoples Revenge</h3>
+                            <p>Bryan Castillo, Museum Assistant</p>
+                            <p>Monday, September 27, 2021. 1:00 p.m. – 3:00 p.m. Registration Required</p>
+                        </td>
+                        <td>
+                            <img src="images/event5.jpg"
+                                 alt="Leopoldo Méndez, The Peoples Revenge" width="360" height="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 29</td>
+                        <td>
+                            <h3>The Art of Looking</h3>
+                            <p>Diego Rivera, No. 9, Nature Morte Espagnole</p>
+                            <p>Wednesday, September 29, 2021. 1:00 p.m. – 2:00 p.m. Registration Required</p>
+                        </td>
+                        <td>
+                            <img src="images/event6.jpg"
+                                 alt="The Art of Looking" width="360" height="auto">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-container">
+        <div class="item-header">
+            <h2>Event Video</h2>
+        </div>
+        <div class="item-video">
+            <video width="900" height="auto" controls>
+                <source src="videos/video1.mp4"
+                        type="video/webm">
+            </video>
+        </div>
+    </section>
 </main>
 <footer>
     <!-- Put footer here -->
-    <h2>Let's Keep in Touch!</h2>
-    <ul>
-        <li><a href="mailto:email@example.com">email@example.com</a></li>
-        <li><a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></li>
-        <li><a href="#" target="_blank">Twitter</a></li>
-        <li><a href="#" target="_blank">LinkedIn</a></li>
-        <li><a href="#" target="_blank">Facebook</a></li>
-    </ul>
+    <section class="footer-container">
+        <div class="footer-content">
+            <h3>One Art Nation</h3>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/wasin.sanguansuk/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC27ReFGZUWKYYLFGzdHogmw"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/wasin-sanguansuk/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>copyright &copy;2021 OneArtNation. Designed By <span>Wasin</span></p>
+        </div>
+    </section>
 </footer>
 </body>
 </html>

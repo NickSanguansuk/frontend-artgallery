@@ -1,0 +1,250 @@
+
+/* Main Content */
+main {
+    width: 1200px;
+    margin: auto;
+    /*justify-content: center;*/
+    /*color: #c6c7f7;*/
+    color: #f7f7c6;
+}
+
+/*.top-container {*/
+/*    padding-top: 25px;*/
+/*}*/
+
+/*.top-container h2 {*/
+/*    color: #f7f7c6;*/
+/*}*/
+
+/*.top-container p span {*/
+/*    font-weight: bold;*/
+/*    font-size: 1.2em;*/
+/*}*/
+
+/*.main-container {*/
+/*    padding-top: 30px;*/
+/*}*/
+
+/*.main-container h2 {*/
+/*    color: #f7f7c6;*/
+/*}*/
+
+/*table {*/
+/*    margin-top: 2em;*/
+/*    margin-bottom: 1em;*/
+/*}*/
+
+/*table.my-table {*/
+/*    border-collapse: collapse;*/
+/*    text-align: left;*/
+/*    font-family: Avenir, Roboto, Heveltica, sans-serif;*/
+/*}*/
+
+/*.my-table th {*/
+/*    text-align: center;*/
+/*    text-transform: uppercase;*/
+/*    !*padding: 10px;*!*/
+/*}*/
+
+/*.my-table th, .my-table td {*/
+/*    border: 1px solid #999;*/
+/*    padding: 0.5em 0.75rem 0.2em;*/
+/*    vertical-align: top;*/
+/*}*/
+
+/*.my-table img {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*}*/
+
+/*.bottom-container {*/
+/*    padding-top: 30px;*/
+/*}*/
+
+/*.bottom-container h2 {*/
+/*    color: #f7f7c6*/
+/*}*/
+
+/*.bottom-container .item-video {*/
+/*    padding-top: 10px;*/
+/*    padding-bottom: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.main-container .content h2 {
+    color: #f7f7c6;
+    font-size: 36px;
+    font-weight: 500;
+
+}
+
+.main-container .content p {
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo {
+    /*width: 44%;*/
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #591253;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+    font-size: 1.4em;
+    /*font-weight: 500;*/
+    font-weight: bold;
+    /*color: #00bcd4;*/
+    padding-bottom: 0;
+}
+
+.container .contactInfo .box .text p {
+    margin-top: 0;
+}
+
+.contactForm {
+    /*width: 44%;*/
+    width: 64%;
+    padding: 40px 40px;
+    margin-top: 30px;
+    background: #591253;
+    /*display: flex;*/
+}
+
+.contactForm h2 {
+    color: #f7f7c6;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #f7f7c6;
+    outline: none;
+    resize: none;
+    background-color: #591253;;
+    color: #ffffff;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #ffffff;
+    opacity: .4;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    /*color: #e91e63;*/
+    opacity: .9;
+    font-size: 12px;
+    transform: translateY(-22px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #280525;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
