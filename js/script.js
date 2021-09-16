@@ -1,3 +1,13 @@
+function changeColorRed() {
+    let ulv = document.getElementById('test01');
+    ulv.style.color = 'red';
+}
+
+function changeColorWhite() {
+    let ulv = document.getElementById('test01');
+    ulv.style.color = 'white';
+}
+
 function addP1() {
     addPaintingToFavorite('Tomorrow I May Be Far Away');
 }
@@ -69,17 +79,17 @@ function addPaintingToFavorite(data) {
 
         printText = 'Recently Added ---> "' + data + '"';
 
-        document.getElementById('printLocation').innerHTML = printText;
-        printer = document.getElementById('printLocation');
-        printer.lastElementChild.style.color = "white";
+        //printer = document.getElementById('printLocation');
+        //printer.lastElementChild.style.color = "white";
 
     } else {
         printText = '"' + data + '" is already in the favorite list';
 
-        document.getElementById('printLocation').innerHTML = printText;
-        printer = document.getElementById('printLocation');
-        printer.lastElementChild.style.color = "red";
+        //printer = document.getElementById('printLocation');
+        //printer.lastElementChild.style.color = "red";
     }
+
+    document.getElementById('printLocation').innerHTML = printText;
 }
 
 function showAllMyFavoriteArts() {
@@ -88,10 +98,30 @@ function showAllMyFavoriteArts() {
 
     let printText = '';
 
+    // This is an array (Collection)
+    let lists = ulv.children;
+
     for (let i = 0; i < ulv.children.length; i++) {
         printText += '"' + ulv.children[i].textContent + '", ';
     }
 
     document.getElementById('printLocation').innerHTML = printText;
+}
+
+let button = document.getElementById("printLocation");
+button.addEventListener("mouseover", changeColorRed);
+
+document.addEventListener('keypress',function() {
+    //console.log("You pressed a key, Thanks!");
+    changeColorRed();
+});
+
+function mouseOverEvent() {
+    //alert("This is a Print Area.");
+    changeColorRed();
+}
+
+function mouseOverEvent2() {
+    changeColorWhite();
 }
 

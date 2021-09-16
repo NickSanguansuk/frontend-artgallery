@@ -236,7 +236,7 @@
 </main>
 <aside>
     <section class="aside-container">
-        <h2>Favorite Arts</h2>
+        <h2 id="test01" onmouseover="mouseOverEvent2()">Favorite Arts</h2>
         <ul id="paintings" class="list-group">
             <!--<li name="list-group-item">Item 1</li>-->
             <!--<li name="list-group-item">Item 2</li>-->
@@ -247,7 +247,7 @@
                    onClick="showAllMyFavoriteArts()"
                    value="Show All My Favorite Arts">
         </form>
-        <h4 id="printLocation">___</h4>
+        <h4 id="printLocation" onmouseover="mouseOverEvent()">___</h4>
     </section>
 </aside>
 <footer>
@@ -269,8 +269,8 @@
     </section>
 </footer>
 <script>
-    //var header = document.getElementById('arts');
-    //console.log(header);
+    document.addEventListener('keypress',function() {
+        console.log("You pressed a Print Area, Thanks!");});
 </script>
 </body>
 </html>
