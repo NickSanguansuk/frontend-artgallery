@@ -63,7 +63,7 @@ function addPaintingToFavorite(data) {
     let b = true;
 
     for (let i = 0; i < ulv.children.length; i++) {
-        if (ulv.children[i].textContent == data) {
+        if (ulv.children[i].textContent === data) {
             b = false;
             break;
         }
@@ -108,20 +108,20 @@ function showAllMyFavoriteArts() {
     document.getElementById('printLocation').innerHTML = printText;
 }
 
-let button = document.getElementById("printLocation");
-button.addEventListener("mouseover", changeColorRed);
+//let button = document.getElementById("printLocation");
+//button.addEventListener("mouseover", changeColorRed);
+//
+//document.addEventListener('keypress',function() {
+//    //console.log("You pressed a key, Thanks!");
+//    changeColorRed();
+//});
 
-document.addEventListener('keypress',function() {
-    //console.log("You pressed a key, Thanks!");
-    changeColorRed();
-});
-
-function mouseOverEvent() {
+function mouseOverEventChangeToRed() {
     //alert("This is a Print Area.");
     changeColorRed();
 }
 
-function mouseOverEvent2() {
+function mouseOverEventChangeToWhite() {
     changeColorWhite();
 }
 
